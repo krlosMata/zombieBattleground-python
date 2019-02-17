@@ -8,5 +8,7 @@ setup(
     author='krlosMata',
     author_email='krlosMata@gmail.com',
     version='0.0.1',
-    scripts=['provoj/__init__.py']
+    classifiers=[
+      'Programming Language :: Python :: 3.5',
+    ],
 )

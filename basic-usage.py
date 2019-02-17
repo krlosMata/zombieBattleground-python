@@ -1,14 +1,60 @@
-from zombieBattleground import zombieBattleground
+import zombieBattleground
 
-
+'''
+Initialize class zombieBattleground
+'''
 zombies = zombieBattleground.ZombieBattleground(zombieBattleground.API_V1)
-filters = {
+
+'''
+Get Decks
+'''
+dataGetDecks = zombies.getDeckList()
+
+'''
+Get Decks by any filter
+'''
+filtersDeckList = {
   'user_id':'ZombieSlayer_5699',
 }
-data1 = zombies.getDeckList(filters)
+dataGetDecksFiltered = zombies.getDeckList(filtersDeckList)
 
-data2 = zombies.getDeckList()
+'''
+Get Decks by Id
+'''
+dataGetDecksById = zombies.getDeckByID('3')
 
-a = 5
-a = a + 5
+'''
+Get Matches
+'''
+dataGetMatches = zombies.getMatchList()
 
+'''
+Get Matches by any filter
+'''
+filtersMatchList = {
+  'id':'8',
+}
+dataGetMatchesFiltered = zombies.getMatchList(filtersMatchList)
+
+'''
+Get Match by Id
+'''
+dataGetMatchesById = zombies.getMatchByID('3')
+
+'''
+Get Card List
+'''
+dataGetCardList = zombies.getCardList()
+
+'''
+Get Card List by any filter
+'''
+filtersCardList = {
+  'name':'Whizpar',
+}
+dataGetCardListFiltered = zombies.getCardList(filtersCardList)
+
+'''
+Get Card List by any filter
+'''
+dataGetCardList = zombies.getCard('1', 'v3')
