@@ -3,12 +3,12 @@ import zombieBattleground
 '''
 Initialize class zombieBattleground
 '''
-zombies = zombieBattleground.ZombieBattleground(zombieBattleground.API_V1)
+ZombieAPI = zombieBattleground.ZombieBattleground(zombieBattleground.API_V1)
 
 '''
 Get Decks
 '''
-dataGetDecks = zombies.getDeckList()
+dataGetDecks = ZombieAPI.getDeckList()
 
 '''
 Get Decks by any filter
@@ -16,17 +16,17 @@ Get Decks by any filter
 filtersDeckList = {
   'user_id':'ZombieSlayer_5699',
 }
-dataGetDecksFiltered = zombies.getDeckList(filtersDeckList)
+dataGetDecksFiltered = ZombieAPI.getDeckList(filtersDeckList)
 
 '''
 Get Decks by Id
 '''
-dataGetDecksById = zombies.getDeckByID('3')
+dataGetDecksById = ZombieAPI.getDeckByID('3')
 
 '''
 Get Matches
 '''
-dataGetMatches = zombies.getMatchList()
+dataGetMatches = ZombieAPI.getMatchList()
 
 '''
 Get Matches by any filter
@@ -34,17 +34,17 @@ Get Matches by any filter
 filtersMatchList = {
   'id':'8',
 }
-dataGetMatchesFiltered = zombies.getMatchList(filtersMatchList)
+dataGetMatchesFiltered = ZombieAPI.getMatchList(filtersMatchList)
 
 '''
 Get Match by Id
 '''
-dataGetMatchesById = zombies.getMatchByID('3')
+dataGetMatchesById = ZombieAPI.getMatchByID('1454')
 
 '''
 Get Card List
 '''
-dataGetCardList = zombies.getCardList()
+dataGetCardList = ZombieAPI.getCardList()
 
 '''
 Get Card List by any filter
@@ -52,9 +52,9 @@ Get Card List by any filter
 filtersCardList = {
   'name':'Whizpar',
 }
-dataGetCardListFiltered = zombies.getCardList(filtersCardList)
+dataGetCardListFiltered = ZombieAPI.getCardList(filtersCardList)
 
 '''
 Get Card List by any filter
 '''
-dataGetCardList = zombies.getCard('1', 'v3')
+dataGetCardList = ZombieAPI.getCard('1', 'v3')
